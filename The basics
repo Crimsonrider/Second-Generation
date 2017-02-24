@@ -2,21 +2,26 @@ OKAY
 What do we need on a kid...
 
 FIXED
-a) Name
-b) Mother
-c) sibling
+Name
+Mother
+Sibling
+Items received from mother's convos
 
-FIXED BUT RANDOM
-a) default inventory
-b) class skills
-c) skills from mother
-d) class
+FIXED AND RANDOM
+class
+class skills
+default inventory
+skills from mother
+inventory from mother
 
-DEPENDENT ON FATHER
-a) skills from father
+DEPENDENT ON FATHER AND THEREFORE RANDOM
+skills from father
+inventory from father
+items received from father's convos
 
-BOTH
-a) holy blood
-b) (max) weapon ranks
-c) growths
+SUPER DEPENDENT AND THEREFORE SUPER RANDOM
+holy blood
+(max) weapon ranks
+growths
 
+And then there's Seliph, Julia, Leif, and Altena
