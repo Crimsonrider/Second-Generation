@@ -1,0 +1,97 @@
+package inh;
+
+public class HolyBlood {
+	public String name;
+	private int number;
+		//0=Baldur, 1=Hezul, 2=Odo, 3=Nova, 4=Dain, 5=Neir, 6=Ulir
+		//7=Blaggi, 8=Fala, 9=Tordo, 10=Holsety, 11=Naga, 12=Loptyr
+	private int wepType;
+	//0=sword, 1=lance, 2=axe, 3=bow, 4=staff,
+	//5=fire, 6=thunder, 7=wind, 8=light, 9=dark
+	private boolean major;
+	private int[] boosts;
+		
+	public HolyBlood(int crusader, boolean isMajor, int[] growthBoosts) {
+		number = crusader;
+		major = isMajor;
+		boosts = growthBoosts;
+		if (major)
+			name = "major";
+		else
+			name = "minor";
+		
+		if (crusader<3) {
+			if (crusader==0)
+				name+="Baldur";
+			else if (crusader==1)
+				name+="Hezul";
+			else //crusader==2
+				name+="Odo";
+			wepType = 0;
+		}
+		else if (crusader<5) {
+			if (crusader==3)
+				name+="Nova";
+			else //crusader==4
+				name+="Dain";
+			wepType = 1;
+		}
+		else if (crusader==5) {
+			name+="Neir";
+			wepType = 2;
+		}
+		else if (crusader==6) {
+			name+="Ulir";
+			wepType = 3;
+		}
+		else if (crusader==7) {
+			name+="Blaggi";
+			wepType = 4;
+		}
+		else if (crusader==8) {
+			name+="Fala";
+			wepType = 5;
+		}
+		else if (crusader==9) {
+			name+="Tordo";
+			wepType = 6;
+		}
+		else if (crusader==10) {
+			name+="Holsety";
+			wepType = 7;
+		}
+		else if (crusader==11) {
+			name+="Naga";
+			wepType = 8;
+		}
+		else { //crusader==12
+			name+="Loptyr";
+			wepType = 9;
+		}
+	}
+	
+	public void setMajor() {
+		major = true;
+	}
+	
+	public int crusader() {
+		return number;
+	}
+	
+	public int weapon() {
+		return wepType;
+	}
+	
+	public boolean isMajor() {
+		return major;
+	}
+	
+	public int[] boosts() {
+		return boosts;
+	}
+	
+	public int[] minorBoosts() {
+	    // TODO write thiiiis
+	}
+	
+}
