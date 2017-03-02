@@ -1,0 +1,86 @@
+package inh;
+
+import java.util.ArrayList;
+
+public class Child {
+	private String name;
+	private boolean dominantChild;
+	
+	private Unit staticParent;
+	private ArrayList <HolyBlood> baseBlood;
+	private int[] baseGrowths;
+	private ArrayList <Integer> baseSkills;
+	
+	private UnitClass charClass;
+	private int classSkill;
+	private int[] wepRanks;
+	private boolean alreadyPromoted;
+	private String promotion;
+	private int[] maxWepRanks;
+	private int promoSkill;
+	
+	private Unit dynamicParent;
+	private ArrayList <HolyBlood> newBlood;
+	private int[] newGrowths;
+	private ArrayList <Integer> newSkills;
+	
+	private ArrayList <Weapon> Inventory;
+	
+	public Child (String theirName, Unit alwaysParent, boolean dominantOne, UnitClass theClass, boolean promoted) {
+		//basic stuff
+		name = theirName;
+		staticParent = alwaysParent;
+		dominantChild = dominantOne;
+		charClass = theClass;
+		alreadyPromoted = promoted;
+		
+		//holy blood
+		for (HolyBlood x : staticParent.holyBlood) {
+		    if (x.isMajor()) {
+		        if (dominantChild)
+		            baseBlood.add(new HolyBlood(x.crusader(), true, x.boosts()));
+		    }
+		    else 
+		        baseBlood.add(new HolyBlood(x.crusader(), false, x.minorBoosts());
+		}
+		
+		//base growths
+		for (int i=0; i<8; i++) {
+		    if (dominantChild)
+		        baseGrowths[i] = staticParent.growths[i];
+		    else 
+		        baseGrowths[i] = (staticParent.growths[i])/2;
+		}
+		
+		//personal skills
+		for (int i : staticParent.personalSkills) 
+			baseSkills.add(i);
+			
+		//class stuff
+		classSkill = charClass.classSkill;
+		if (!baseSkills.contains(classSkill))
+		    baseSkills.add(classSkill);
+		wepRanks = charClass.wepRanks;
+		
+		promotion = charClass.promotion;
+		for (int i=0; i<9; 1++) {
+		    maxWepRanks[i] = wepRanks[i] + charClass.rankChanges[i];
+		}
+		skillOnPromo = charClass.skillOnPromo;
+		    
+		//prepromote stuff
+		if (alreadyPromoted) {
+		    promotion="";
+		    maxWepRanks = wepRanks;
+		    if (!baseSkills.contains(skillOnPromo))
+		        baseSkills.add(skillOnPromo);
+		}
+		
+	}
+	
+	public void setDynamicParent(Unit other) {
+	    
+	}
+	
+	
+}
