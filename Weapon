@@ -1,0 +1,24 @@
+package inh;
+
+public class Weapon {
+	public String name;
+	private int rank;
+		//0=none, 1=C, 2=B, 3=A, 4+=*;
+	private int wepType;
+		//0=sword, 1=lance, 2=axe, 3=bow, 4=staff,
+		//5=fire, 6=thunder, 7=wind, 8=light, 9=dark
+	
+	public Weapon (String itsName, int wepRank, int type) {
+		name = itsName;
+		rank = wepRank;
+		wepType = type;
+	}
+	
+	public int rank() {
+		return rank;
+	}
+	
+	public int wepType() {
+		return wepType;
+	}
+}
