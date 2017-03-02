@@ -1,0 +1,20 @@
+package inh;
+
+public class UnitClass {
+	public String name; //name of the t1 class
+	public int[] wepRanks, rankChanges; 
+	    //0=none, 1=C, 2=B, 3=A, 4+=*
+	    //rankChanges are added to wepRanks for promoted ranks
+	public String promotion; //name of the t2 class
+	public int skillOnPromo; //22 if none
+	public int classSkill; //22 if none
+	
+	public UnitClass (String className, int[] ranks, String promo, int[] addRanks, int skill, int newSkill) {
+		name = className;
+		wepRanks = ranks;
+		promotion = promo;
+		rankChanges = addRanks;
+		classSkill = skill;
+		skillOnPromo = newSkill;
+	}
+}
