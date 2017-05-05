@@ -1,0 +1,263 @@
+Shannan
+80 30 5 20 20 20 40 5
+3 0 5 10
+1 1 1
+29
+2
+None
+None
+None
+None
+1 4
+
+Roddlevan
+80 30 5 50 30 20 30 5
+1 4
+0
+3
+3
+Radney
+Ulster
+Larcei
+Ayra
+1 3
+
+Asaello
+90 40 5 10 20 60 30 5
+1 2
+0
+7
+7
+Daisy
+Faval
+Patty
+Briggid
+1 42
+
+Johan
+90 40 5 20 50 10 30 5
+1 4
+1 5 0
+13
+12
+None
+None
+None
+None
+1 35
+
+Sharlow
+70 10 50 20 20 30 10 30
+1 7
+0
+27
+21
+Laylea
+Corple
+Leen
+Sylvia
+1 72
+
+Hawk
+60 10 20 20 50 20 20 10
+2 0 5
+0
+29
+20
+Femina
+Sety
+Fee
+Fury
+1 61
+
+Tristan
+130 30 5 30 20 10 30 5
+1 1
+0
+11
+10
+Jeanne
+Delmudd
+Nanna
+Raquesis
+1 0
+
+Finn
+70 30 5 40 30 50 30 5
+2 0 6
+0
+12
+11
+None
+None
+None
+None
+1 25
+
+Dimna
+90 30 5 50 20 30 40 5
+1 0
+0
+14
+13
+Mana
+Lester
+Lana
+Aideen
+1 40
+
+Hannibal
+60 50 5 10 10 10 30 5
+2 5 4
+0
+29
+14
+None
+None
+None
+None
+2 5 24
+
+Ares
+90 30 5 20 30 50 40 30
+3 0 5 4
+1 2 1
+9
+8
+None
+None
+None
+None
+2 20 25
+
+Amid
+70 20 40 20 40 20 20 20
+1 5
+1 9 0
+23
+17
+Linda
+Arthur
+Tinny
+Tiltyu
+1 56
+
+Oifey
+80 30 5 40 30 30 30 10
+2 0 1
+1 0 0
+29
+8
+None
+None
+None
+None
+2 23 28
+
+Daisy
+50 10 10 30 50 30 20 10
+1 6
+0
+4
+4
+Asaello
+Patty
+Faval
+Briggid
+1 12
+
+Radney
+70 40 5 30 40 20 30 20
+1 0
+0
+3
+3
+Roddlevan
+Larcei
+Ulster
+Ayra
+1 3
+
+Mana
+50 10 30 20 20 40 10 20
+0
+0
+27
+21
+Dimna
+Lana
+Lester
+Aideen
+1 69
+
+Julia
+50 10 30 20 30 30 10 10
+3 0 5 3
+2 11 1 8 0
+26
+20
+None
+None
+None
+None
+0
+
+Femina
+60 30 10 20 50 50 20 5
+1 5
+0
+19
+15
+Hawk
+Fee
+Sety
+Fury
+2 31 9
+
+Linda
+70 10 40 10 30 20 10 20
+2 13 7
+1 9 0
+22
+18
+Amid
+Tinny
+Arthur
+Tiltyu
+1 52
+
+Laylea
+50 50 10 20 40 30 20 20
+1 12
+0
+5
+25
+Sharlow
+Leen
+Corple
+Sylvia
+0
+
+Jeanne
+60 20 20 50 20 10 30 20
+0
+0
+10
+9
+Tristan
+Nanna
+Delmudd
+Raquesis
+2 0 70
+
+Johalva
+90 40 0 50 10 10 30 5
+1 2
+1 5 0
+6
+6
+None
+None
+None
+None
+1 35

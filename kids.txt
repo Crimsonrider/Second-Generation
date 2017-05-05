@@ -1,0 +1,68 @@
+Seliph
+0
+0
+1 13
+Leif
+1
+1
+1 0
+Altena
+20
+16
+1 33
+Ulster
+3
+3
+1 3
+Faval
+7
+7
+1 42
+Corpul
+27
+21
+1 72
+Sety
+29
+20
+1 61
+Delmudd
+11
+10
+1 0
+Lester
+14
+13
+1 40
+Arthur
+24
+19
+1 56
+Patty
+4
+4
+1 12
+Larcei
+3
+2
+1 3
+Lana
+27
+21
+1 69
+Fee
+19
+15
+2 31 9
+Tinny
+24
+18
+1 52
+Leen
+5
+25
+0
+Nanna
+10
+9
+2 0 70
