@@ -263,7 +263,7 @@ public class Child {
 
 		
 		if(this.otherParent==null) {
-			this.setOtherParent(Driver.allParents.get(24));
+			this.setOtherParent(GenDriver.allParents.get(24));
 		}
 		
 		for (int i = 0; i < 8; i++)

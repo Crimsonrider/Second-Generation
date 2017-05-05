@@ -385,9 +385,9 @@ public class Build extends JFrame implements ItemListener {
 			setHolyBlood(true);
 			setWpnRanks(true);
 			setSharedRanks(true);
-			portrait.setIcon(new ImageIcon("images/Children/" + Driver.activeChild.name + ".gif"));
-			classIc.setIcon(new ImageIcon("images/Classes/" + Driver.activeChild.getUnitClass() + ".gif"));
-			className.setText(Driver.activeChild.getUnitClass());
+			portrait.setIcon(new ImageIcon("images/Children/" + GenDriver.activeChild.name + ".gif"));
+			classIc.setIcon(new ImageIcon("images/Classes/" + GenDriver.activeChild.getUnitClass() + ".gif"));
+			className.setText(GenDriver.activeChild.getUnitClass());
 		}
 		if (e.getSource().equals(staticDropdown)) {
 			motherN.setText("Replaced mother");
@@ -402,16 +402,16 @@ public class Build extends JFrame implements ItemListener {
 			setSharedRanks(false);
 			setHolyBlood(false);
 			updateGrowths();
-			portrait.setIcon(new ImageIcon("images/StaticCharacters/" + Driver.activeStatic.name + ".gif"));
-			classIc.setIcon(new ImageIcon("images/Classes/" + Driver.activeStatic.getUnitClass() + ".gif"));
-			className.setText(Driver.activeStatic.getUnitClass());
-			area.setText(Driver.activeStatic.toString());
+			portrait.setIcon(new ImageIcon("images/StaticCharacters/" + GenDriver.activeStatic.name + ".gif"));
+			classIc.setIcon(new ImageIcon("images/Classes/" + GenDriver.activeStatic.getUnitClass() + ".gif"));
+			className.setText(GenDriver.activeStatic.getUnitClass());
+			area.setText(GenDriver.activeStatic.toString());
 			//changeRanks(true);
 			
 		}
 		if (e.getSource().equals(father)) {
-			Driver.activeChild.setOtherParent(Driver.findParent((String)father.getSelectedItem()));
-			area.setText(Driver.activeChild.toString());
+			GenDriver.activeChild.setOtherParent(GenDriver.findParent((String)father.getSelectedItem()));
+			area.setText(GenDriver.activeChild.toString());
 			updateGrowths();
 			//changeRanks(false);
 			setSharedRanks(true);
@@ -425,8 +425,8 @@ public class Build extends JFrame implements ItemListener {
 	
 	public void setSharedRanks(boolean child) {		
 		if (child) {
-			String parentName = Driver.activeChild.getEqHBParent();
-			int[] theirRanks = Driver.activeChild.getSharedRanks();
+			String parentName = GenDriver.activeChild.getEqHBParent();
+			int[] theirRanks = GenDriver.activeChild.getSharedRanks();
 			if (parentName != null) {
 				shR.setText("Ranks shared with " + parentName + ": ");
 				for (int i=0; i<10; i++) {
@@ -453,9 +453,9 @@ public class Build extends JFrame implements ItemListener {
 	public void setWpnRanks(boolean child) {
 		int[] theirRanks;
 		if (child)
-			theirRanks = Driver.activeChild.getWpnRanks();
+			theirRanks = GenDriver.activeChild.getWpnRanks();
 		else {
-			theirRanks = Driver.activeStatic.getWpnRanks();
+			theirRanks = GenDriver.activeStatic.getWpnRanks();
 		}
 		if (!child) {
 			for (int i=0; i<10; i++) {
@@ -469,7 +469,7 @@ public class Build extends JFrame implements ItemListener {
 				}
 			}
 		}
-		if (child && Driver.activeChild.getOtherParent() != null) {
+		if (child && GenDriver.activeChild.getOtherParent() != null) {
 			for (int i=0; i<10; i++) {
 				if (theirRanks[i] > 0) {
 					wpnLabels.get(i).setText(""+tsRanks[theirRanks[i]]);
@@ -486,10 +486,10 @@ public class Build extends JFrame implements ItemListener {
 	public void setInventory(boolean child) {
 		ArrayList <Weapon> inventory;
 		if (child) {
-			inventory = Driver.activeChild.getInventory();
+			inventory = GenDriver.activeChild.getInventory();
 		}
 		else { //static char
-			inventory = Driver.activeStatic.getInventory();
+			inventory = GenDriver.activeStatic.getInventory();
 		}
 		switch (inventory.size()) {
 			case 1:
@@ -513,9 +513,9 @@ public class Build extends JFrame implements ItemListener {
 			return 0;
 		else {
 			if (staticChar)
-				ranks = Driver.activeStatic.getWpnRnks();
+				ranks = GenDriver.activeStatic.getWpnRnks();
 			else
-				ranks = Driver.activeChild.getWpnRnks();
+				ranks = GenDriver.activeChild.getWpnRnks();
 			int pos;
 			
 			
@@ -559,10 +559,10 @@ public class Build extends JFrame implements ItemListener {
 	private void changeRanks(boolean staticChar) {
 		String ranks;
 		if (staticChar) {
-			ranks = Driver.activeStatic.getWpnRnks();
+			ranks = GenDriver.activeStatic.getWpnRnks();
 		}
 		else {
-			ranks = Driver.activeChild.getWpnRnks();
+			ranks = GenDriver.activeChild.getWpnRnks();
 		}
 			int pos = ranks.indexOf("Swd-");
 			if (pos != -1) {
@@ -719,26 +719,26 @@ public class Build extends JFrame implements ItemListener {
 	*/
 	
 	private void updateGrowths() {
-		HPG.setText(""+Driver.getG(0)+"%");
-		StrG.setText(""+Driver.getG(1)+"%");
-		MagG.setText(""+Driver.getG(2)+"%");
-		SklG.setText(""+Driver.getG(3)+"%");
-		SpdG.setText(""+Driver.getG(4)+"%");
-		LckG.setText(""+Driver.getG(5)+"%");
-		DefG.setText(""+Driver.getG(6)+"%");
-		ResG.setText(""+Driver.getG(7)+"%");
+		HPG.setText(""+GenDriver.getG(0)+"%");
+		StrG.setText(""+GenDriver.getG(1)+"%");
+		MagG.setText(""+GenDriver.getG(2)+"%");
+		SklG.setText(""+GenDriver.getG(3)+"%");
+		SpdG.setText(""+GenDriver.getG(4)+"%");
+		LckG.setText(""+GenDriver.getG(5)+"%");
+		DefG.setText(""+GenDriver.getG(6)+"%");
+		ResG.setText(""+GenDriver.getG(7)+"%");
 	}
 	
 	
 	private void setChild() {
-		Driver.setActiveChild((String)childDropdown.getSelectedItem());
-		Driver.activeChild.setOtherParent(Driver.findParent((String)father.getSelectedItem()));
-		skills.setText(Driver.activeChild.getSkills());
+		GenDriver.setActiveChild((String)childDropdown.getSelectedItem());
+		GenDriver.activeChild.setOtherParent(GenDriver.findParent((String)father.getSelectedItem()));
+		skills.setText(GenDriver.activeChild.getSkills());
 	}
 	
 	private void setStatic() {
-		Driver.setActiveStatic((String)staticDropdown.getSelectedItem());
-		skills.setText(Driver.activeStatic.getSkills());
+		GenDriver.setActiveStatic((String)staticDropdown.getSelectedItem());
+		skills.setText(GenDriver.activeStatic.getSkills());
 		for (JLabel x : wpnSLabels) {
 			x.setText("");
 			x.setIcon(new ImageIcon());
@@ -748,9 +748,9 @@ public class Build extends JFrame implements ItemListener {
 	private void setHolyBlood(boolean child) {
 		String x;
 		if (child)
-			x = Driver.activeChild.getHolyBlood();
+			x = GenDriver.activeChild.getHolyBlood();
 		else
-			x = Driver.activeStatic.getHolyBlood();
+			x = GenDriver.activeStatic.getHolyBlood();
 		hb.setText(x);
 	}
 

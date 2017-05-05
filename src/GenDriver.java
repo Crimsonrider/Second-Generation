@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.awt.*;
 import javax.swing.*;
 
-public class Driver extends JFrame {
+public class GenDriver extends JFrame {
 	public static HolyBlood[][] allHolyBlood = new HolyBlood [13][2];
 	public static UnitClass[] allMyClasses = new UnitClass [39];
 	public static ArrayList <Unit> allParents = new ArrayList <Unit> ();
